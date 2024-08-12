@@ -1,0 +1,60 @@
+header.site-header, footer.site-footer {
+background-color: #333;
+  padding: 15px;
+  color: #eee;
+}
+
+.site-main {
+  margin-top: 15px ;
+  margin-bottom: 15px;
+  padding: 30px;
+  background-color: #333;
+}
+
+.theme-picture-wrapper {
+  
+}
+
+.theme-picture {
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+.site-logo {
+  margin-right: 15px;
+}
+
+.site-name a {
+  font-size: larger;
+  font-weight: bold;
+  color: #eee;
+}
+
+/* aタグだからtext-align: center;を書いても効かない */
+.site-theme-logo {
+  color:#eee;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.c > p {
+  color:white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+.site-theme-logo-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.branding-things {
+  display:flex;
+}
+
+.contextual-region {
+  display: inline-block; /* インライン要素にすることで横に回り込む */
+  vertical-align: middle;
+}

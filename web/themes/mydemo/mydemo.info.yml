@@ -1,0 +1,12 @@
+name: My Demo Theme
+type: theme
+description: 'My Demonstration theme.'
+core_version_requirement: ^9 || ^10
+base theme: false
+regions:
+  myheader: 'My Header' 
+  menu: 'Menu'
+  content: 'Content'
+  myfooter: 'My Footer'
+libraries:
+  - mydemo/global-styling
