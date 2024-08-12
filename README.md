@@ -14,3 +14,5 @@
 ・特にblock--system-branding-block.html.twigなどの編集は難しく、drupalによって
 出力されるコンテンツの中身がpタグによって動的に生成されるので,wrapperのdivタグで囲い
 ブロック要素限定の操作を行えるようにした。
+
+・画像の挿入が相対パスではできなかった。そのためsrc="\{\{directory\}\}/images/mytheme.photo.jpg"というtwigの記述方法に則った。
