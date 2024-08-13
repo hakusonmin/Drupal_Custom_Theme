@@ -1,18 +1,17 @@
 
 ## 概要
-・chrome devloper tool を使い twig のtemplate suggestions を頼りにしながら
-作成した。
+・chrome devloper tool を使い、twig のtemplate suggestions を頼りにしながら、作成した。
 
 ## 工夫した点
-・動的なpageであるため静的なpageのように要素がどこのファイルにあり、分かりにくかった。
-そのため実際にオーバーライドしたtemplatesを変更し、classに値を当てはめてどこのコードが
-どこに対応するのか確認しながら作成した。
+・動的なpageであるため、静的なpageに比べて、変更したい要素がどこのファイルに書かれているのか、
+分かりにくかった。
+そのため、実際にオーバーライドしたtemplatesを変更し、classに値を当てはめてどこのコードが
+サイト上のどこの要素に対応するのか確認しながら作成した。
+
+・特にblock--system-branding-block.html.twigなどの編集は難しく、drupalによって
+出力されるコンテンツの中身がpタグに囲まれて、動的に生成されるため要素の特定に苦労した。そこでは、wrapperとしてdivタグでpタグを囲いブロック要素限定の操作を行えるような変更を行ったりした。
 
 ・コードの記述を間違えて画面上にエラーが出ると、上部のtoolbarまでもが表示されなくなってしまい
 キャッシュクリアできなくなってしまう。そのためdrushをインストールしてcli上でdrush crすることによって対応した。
 
-・特にblock--system-branding-block.html.twigなどの編集は難しく、drupalによって
-出力されるコンテンツの中身がpタグによって動的に生成されるので,wrapperのdivタグで囲い
-ブロック要素限定の操作を行えるようにした。
-
-・画像の挿入が相対パスではできなかった。そのためsrc="\{\{directory\}\}/images/mytheme.photo.jpg"というtwigの記述方法に則った。
+・画像の挿入が相対パスではできなかった。そのためsrc="\{\{directory\}\}/images/mytheme.photo.jpg"というtwigの記述方法に則り、挿入した。
